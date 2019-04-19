@@ -1,4 +1,4 @@
 function complejo=guardarComplejo(valor)
-  complejo.real=valor;
-  complejo.imag=valor;
+  complejo.real=real(valor);
+  complejo.imag=imag(valor);
 endfunction
