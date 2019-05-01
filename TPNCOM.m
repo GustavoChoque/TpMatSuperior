@@ -9,6 +9,11 @@ compBinomica2.imag=0;
 compPolar2.modulo=0;
 compPolar2.argumento=0;
 
+totalBinomica.real=0;
+totalBinomica.imag=0;
+
+totalPolar.modulo=0;
+totalPolar.argumento=0;
 %%seingresa(nreal)+(nima)i para binomica y [modulo,argumento] para la polar
 %%%--------------------------
 disp("Bienvenido a NCOM\n");
@@ -50,8 +55,16 @@ if(isvector(comp2) & length(comp1)==2) %& !iscomplex(comp2))
   %disp(compBinomica.imag);
   %disp(comp1);
   %disp(comp2);
-  disp(compPolar1);
-  disp(compBinomica1);
+  %disp(compPolar1);
+  %disp(compBinomica1);
+  %totalBinomica=multiplicacionDeComplejos(compBinomica1,compBinomica2);
+  %totalPolar=transformarAPolar(totalBinomica);
+  %disp(totalBinomica);
+  %disp(totalPolar);
+  totalPolar=cocienteDeComplejos(compPolar1,compPolar2);
+  totalBinomica=transformarABinomica(totalPolar);
+  disp(totalBinomica);
+  disp(totalPolar);
   
 endif
 %%NOTA
