@@ -78,10 +78,50 @@ opc=input("seleccione una opcion: ");
                 disp("Opcion incorrecta\n");
               endswitch
               disp(totalBinomica);
-                disp(totalPolar);
+              disp(totalPolar);
       
   case 2
-    disp("En construccion\n");
+
+    disp("##########################################");
+    disp("OPERACIONES Avanzadas");
+    disp("Binomica: a+bi, Polar: [mod,arg]");
+    disp("------------------------------------------");
+    disp("1.Potencia Natural de Nº Complejos");
+    disp("2.Radicacion Natural de Nº Complejos");
+    disp("3.Calculo de raices primitivas de Nº Complejos");
+  
+    opcSubmenu=input("seleccione una opcion: ");
+    comp1=input("ingrese el primer Nº complejo ");
+    n=input("ingrese la potencia ");
+    %%------------------convesion y guardado de numeros------------
+    if(isvector(comp1) & length(comp1)==2) %& !iscomplex(comp1) )
+      compPolar1=guardarComplejoPolar(comp1);
+      compBinomica1=transformarABinomica(compPolar1);
+     else
+      compBinomica1=guardarComplejo(comp1);
+      compPolar1=transformarAPolar(compBinomica1);
+    endif
+     %%%%------------------------------------------
+              switch(opcSubmenu)
+                case 1
+                                
+                totalPolar=potenciaDeComplejos(compPolar1,n);
+                totalBinomica=transformarABinomica(totalPolar);
+                
+              case 2
+                
+                
+                case 3
+               
+            
+                
+                otherwise
+                disp("Opcion incorrecta\n");
+              endswitch
+              
+              disp(totalPolar);
+              disp(totalBinomica);
+    
   case 3
     disp("En construccion\n");
   case 0  
